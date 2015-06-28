@@ -1,3 +1,4 @@
+package corpusCalculator;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -48,6 +49,7 @@ public class GetTopThree extends Configured implements Tool {
 
 		public void configure(JobConf job) {
 			try {
+				System.out.println("Inside configure!!");
 				//String CorpusCacheName = new Path(CorpusCaculator.HDFS_CORPUS_).getName();
 				Path [] cacheFiles = DistributedCache.getLocalCacheFiles(job);
 				if (null != cacheFiles && cacheFiles.length > 0) {
@@ -77,7 +79,7 @@ public class GetTopThree extends Configured implements Tool {
 						Double.parseDouble(temp.split("\t")[1]));
 			}
 
-			//System.out.println("Populated the hashtable -- " + ht.size());
+			System.out.println("Populated the hashtable -- " + ht.size());
 
 			Iterator<String> iter = sentenceBucket.iterator();
 
@@ -91,7 +93,7 @@ public class GetTopThree extends Configured implements Tool {
 				for (String w : words) {
 					if (ht.containsKey(w.trim() + " " + wc)) {
 						Double prob = ht.get(w + " " + wc);
-						probsentence *= ((double) prob / 10000);
+						probsentence *= ((double) prob / 100000);
 					}
 					wc = wc + 1;
 				}
