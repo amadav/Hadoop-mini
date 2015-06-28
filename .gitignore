@@ -16,6 +16,7 @@ $RECYCLE.BIN/
 *.class
 *.classpath
 *.project
+*.settings
 
 # Windows shortcuts
 *.lnk
