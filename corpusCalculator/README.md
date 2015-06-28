@@ -5,3 +5,5 @@ Requirements for the program to run correctly.
 --->>> The program has been hardcoded to read the distributed cache files' local path for the corpus file from the location '/opt/corpus.txt'. The file should be named as ‘corpus.txt and in the normal file format with all permissions given.
 
 Please find the EMR report for the codebase test on cluster environment. 
+
+More info about the project at -- https://eee.uci.edu/15s/18415/HW2.pdf
