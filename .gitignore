@@ -45,3 +45,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.prefs
+*.jar
+*.xml
+WebServiceTest/stockTestclient/.settings/org.eclipse.wst.jsdt.ui.superType.container
