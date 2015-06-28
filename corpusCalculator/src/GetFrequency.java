@@ -1,4 +1,4 @@
-package corpusCalculator;
+
 import java.io.IOException;
 import java.util.*;
 
